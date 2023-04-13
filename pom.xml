@@ -31,11 +31,18 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <mainClass>com.myorg.DataAyalysisWorkloadApp</mainClass>
+                    <mainClass>com.myorg.infrastructure.DataAyalysisWorkloadApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- AWS Cloud Development Kit -->
@@ -44,7 +51,6 @@
             <artifactId>aws-cdk-lib</artifactId>
             <version>${cdk.version}</version>
         </dependency>
-
         <dependency>
             <groupId>software.constructs</groupId>
             <artifactId>constructs</artifactId>
